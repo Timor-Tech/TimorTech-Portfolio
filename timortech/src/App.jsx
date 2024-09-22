@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Container } from "react-bootstrap";
+import AboutUs from "./components/AboutUs";
+import Projects from "./components/Projects";
+import ContactUs from "./components/ContactUs";
+import "./App.css"; // Custom CSS for styling
+import Navibar from "./components/Navibar";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      {/* Navigation bar */}
+      <Navibar />
 
-export default App
+      {/* Main Content Container */}
+      <Container className="main-container my-5">
+        {/* About Us Section */}
+        <section id="about">
+          <AboutUs />
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="my-5">
+          <Projects />
+        </section>
+
+        {/* Contact Us Section */}
+        <section id="contact" className="my-5">
+          <ContactUs />
+        </section>
+      </Container>
+    </div>
+  );
+};
+
+export default App;
