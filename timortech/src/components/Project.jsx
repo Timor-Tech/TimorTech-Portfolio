@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import "../styles/styles.css";
 import { FaGithub, FaLink } from "react-icons/fa";
 import sample from "../assets/166291.jpg";
 import sample2 from "../assets/images.jpeg";
@@ -8,6 +7,7 @@ import { useEffect } from 'react';
 //AOS 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import "../styles/Project.css";
 
 function Project() {
   useEffect(() => {
@@ -55,7 +55,7 @@ function Project() {
       <div className="container" data-aos="fade-up">
         <p className="text-light mb-0">Our work</p>
         <h2 className="fw-bold mb-1 project-heading">Projects</h2>
-        <p className="text-light">
+        <p className="text-dark">
           Explore a selection of our latest web development projects, showcasing
           our skills in full stack development, React, MongoDB, and more.
         </p>

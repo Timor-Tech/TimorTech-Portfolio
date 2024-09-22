@@ -1,0 +1,38 @@
+.floating-navbar {
+    margin-top: 20px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* Adjust the width as needed (e.g., 80%, 85%) */
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays on top of other content */
+  }
+  
+  
+  .floating-navbar .navbar-brand {
+    font-weight: bold;
+  }
+  
+
+/* Link styling */
+.floating-navbar .nav-link {
+    color: #000; /* Default link color */
+    font-weight: 500;
+    padding: 10px;
+}
+
+/* Hover effect for links */
+.floating-navbar .nav-link:hover {
+    color: #0056b3
+    text-decoration: none; /* Optional: removes underline */
+}
+
+/* Active state styling */
+.floating-navbar .nav-link.active {
+    color: #0056b3;
+    font-weight: bold; /* Optional: make active link bold */
+}

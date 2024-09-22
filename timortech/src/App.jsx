@@ -1,45 +1,35 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import AboutUs from "./components/AboutUs";
-import Project from "./components/Project";
-import ContactUs from "./components/ContactUs";
-import "./App.css"; // Custom CSS for styling
-import Navibar from "./components/Navibar";
+import React from 'react';
+import { Container, Navbar, Nav } from 'react-bootstrap';
+import AboutUs from './components/AboutUs';
+import Project from './components/Project';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
+import './App.css';
 
-// Bootstrap 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-//React Slick
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Navibar from './components/Navibar';
 
-
-
-const App = () => {
+function App() {
   return (
     <div>
-      {/* Navigation bar */}
       <Navibar />
 
-      {/* Main Content Container */}
-      <Container className="main-container my-5">
-        {/* About Us Section */}
-        <section id="about">
-          <AboutUs />
-        </section>
+      <div id="about">
+        <AboutUs />
+      </div>
 
-        {/* Projects Section */}
-        <section id="projects" className="my-5">
-          <Project />
-        </section>
+      <div id="projects">
+        <Project />
+      </div>
 
-        {/* Contact Us Section */}
-        <section id="contact" className="my-5">
-          <ContactUs />
-        </section>
-      </Container>
+      <div id="contact">
+        <ContactUs />
+      </div>
+
+      <Footer />
     </div>
   );
-};
+}
 
 export default App;
