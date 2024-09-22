@@ -1,10 +1,19 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import AboutUs from "./components/AboutUs";
-import Projects from "./components/Projects";
+import Project from "./components/Project";
 import ContactUs from "./components/ContactUs";
 import "./App.css"; // Custom CSS for styling
 import Navibar from "./components/Navibar";
+
+// Bootstrap 
+import "bootstrap/dist/css/bootstrap.min.css";
+
+//React Slick
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 const App = () => {
   return (
@@ -21,7 +30,7 @@ const App = () => {
 
         {/* Projects Section */}
         <section id="projects" className="my-5">
-          <Projects />
+          <Project />
         </section>
 
         {/* Contact Us Section */}
