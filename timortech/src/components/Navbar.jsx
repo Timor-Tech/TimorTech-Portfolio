@@ -6,7 +6,7 @@ function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-950/75 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between">
         <a className="flex items-center gap-2 text-lg font-semibold" href="#hero">
-          <Rocket className="h-6 w-6 text-purple-500" />
+          <img src="/TimorTech.png" alt="Timor Tech Logo" className="w-8 h-8" />
           <span>Timor Tech</span>
         </a>
         <nav className="hidden md:flex gap-6">

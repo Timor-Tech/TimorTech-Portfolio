@@ -9,6 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 // Images for projects (replace with your actual image paths)
 import sample from "../assets/166291.jpg";
 import sample2 from "../assets/images.jpeg";
+import project1 from "../assets/mystt.jpg";
+import dra1 from "../assets/dra1.jpg";
+import dra2 from "../assets/dra2.jpg";
+import dra3 from "../assets/dra3.jpg";
 
 export default function Projects() {
   // Initialize AOS (Animate On Scroll)
@@ -23,34 +27,37 @@ export default function Projects() {
   // List of projects with image links, titles, descriptions, and tags
   const projects = [
     {
-      image1: sample,
-      image2: sample2,
-      title: "AI-Powered Healthcare Assistant",
+      image1: project1,
+      image2: project1,
+      image3: project1,
+      title: "MYSTT",
       description:
-        "An intelligent system designed to assist healthcare professionals in diagnosis and treatment planning.",
+        "Simple Speech-to-text program for Bahasa Malaysia language",
       githubLink: "https://github.com/Timor-Tech",
       liveLink: "https://healthcare-assistant.live",
-      tags: ["AI", "Machine Learning", "Healthcare"],
+      tags: ["ExpressJS", "NodeJS", "ReactJS", "MongoDB"],
     },
     {
       image1: sample2,
       image2: sample2,
-      title: "Sustainable Smart Cities Platform",
+      image3: sample2,
+      title: "Timora AI Chat Bot",
       description:
-        "An integrated solution for managing urban infrastructure, optimizing energy use, and reducing environmental impact.",
-      githubLink: "https://github.com/Timor-Tech",
-      liveLink: "https://smartcities.live",
-      tags: ["ReactJS", "Sustainability", "Smart Cities"],
+        "A chatbot designed to help users understand the power of artificial intelligence.",
+      githubLink: "https://github.com/yatt-code/Timora-AI.git",
+      liveLink: "https://github.com/yatt-code/Timora-AI.git",
+      tags: ["ExpressJS", "NodeJS", "ReactJS", "MongoDB"],
     },
     {
-      image1: sample2,
-      image2: sample,
-      title: "E-Learning Platform",
+      image1: dra1,
+      image2: dra2,
+      image3: dra3,
+      title: "Disaster Response App",
       description:
-        "An e-learning platform offering meticulously crafted lessons to improve users' skills in various subjects.",
-      githubLink: "https://github.com/Timor-Tech",
-      liveLink: "https://elearning-platform.live",
-      tags: ["E-Learning", "ReactJS", "MongoDB"],
+        "A web-based application that provides information on disaster responses.",
+      githubLink: "https://github.com/yatt-code/Disaster_Response_App.git",
+      liveLink: "https://github.com/yatt-code/Disaster_Response_App.git",
+      tags: ["ExpressJS", "NodeJS", "ReactJS", "MongoDB"],
     },
   ];
 
@@ -65,7 +72,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
-            images={[project.image1, project.image2]}
+            images={[project.image1, project.image2, project.image3]}
             title={project.title}
             description={project.description}
             githubLink={project.githubLink}
