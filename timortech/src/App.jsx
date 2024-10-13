@@ -1,33 +1,32 @@
-import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
-import AboutUs from './components/AboutUs';
-import Project from './components/Project';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
-import './App.css';
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Navibar from './components/Navibar';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Values from "./components/Values";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div>
-      <Navibar />
-
-      <div id="about">
-        <AboutUs />
-      </div>
-
-      <div id="projects">
-        <Project />
-      </div>
-
-      <div id="contact">
-        <ContactUs />
-      </div>
-
-      <Footer />
+    <div className="bg-gray-950 text-gray-100 min-h-screen">
+      <Navbar />
+      <main className="container mx-auto px-4 py-8">
+        {/* Each section is wrapped with a section tag and given a unique ID */}
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="values">
+          <Values />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
     </div>
   );
 }
