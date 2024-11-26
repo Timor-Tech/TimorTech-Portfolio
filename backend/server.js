@@ -47,7 +47,21 @@ app.post('/contact', (req, res) => {
       console.error(err.message);
       res.status(500).json({ error: 'Could not save message' });
     } else {
+      console.log(`New message received: ID = ${this.lastID}, Name = ${name}`);
       res.status(200).json({ success: 'Message saved successfully' });
+    }
+  });
+});
+
+// Route to retrieve all contact submissions
+app.get('/contact/all', (req, res) => {
+  const query = 'SELECT * FROM contacts';
+  db.all(query, [], (err, rows) => {
+    if (err) {
+      console.error('Error fetching contacts:', err.message);
+      res.status(500).json({ error: 'Could not retrieve contacts' });
+    } else {
+      res.status(200).json(rows);
     }
   });
 });

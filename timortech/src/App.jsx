@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -6,11 +7,39 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Toggle dark mode and save preference in localStorage
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => !prev);
+  };
+
+  // Set the class for dark mode on page load based on localStorage
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedDarkMode);
+    if (savedDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  // Update localStorage whenever darkMode changes
+  useEffect(() => {
+    console.log("Dark Mode Toggled:", darkMode);
+    localStorage.setItem("darkMode", darkMode);
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="bg-gray-950 text-gray-100 min-h-screen">
-      <Navbar />
+<div className={`min-h-screen bg-gray-50 dark:bg-black`}>
+<Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main className="container mx-auto px-4 py-8">
-        {/* Each section is wrapped with a section tag and given a unique ID */}
         <section id="hero">
           <Hero />
         </section>
