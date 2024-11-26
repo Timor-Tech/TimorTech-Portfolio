@@ -8,14 +8,14 @@ export default function Hero() {
           Innovating the Future
         </span>
         {/* Optional: Text shadow to enhance visibility */}
-        <span className="absolute inset-0 text-5xl text-gray-100 opacity-10">
+        <span className="absolute inset-0 text-5xl text-gray-100 opacity-10 dark:text-gray-800">
           Innovating the Future
         </span>
       </h1>
-      <p className="text-xl mb-8 max-w-2xl mx-auto">
+      <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-800 dark:text-gray-200">
         Timor Tech is at the forefront of cutting-edge technology, creating solutions that shape tomorrow's world.
       </p>
-      <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg py-6 px-8" variant="default">
+      <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg py-6 px-8 dark:bg-purple-800 dark:hover:bg-purple-900" variant="default">
         Discover Our Vision
       </Button>
     </section>

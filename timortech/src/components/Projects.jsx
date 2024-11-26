@@ -64,8 +64,8 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 container mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold">Our Projects</h2>
-        <p>Explore a selection of our latest technology projects.</p>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Our Projects</h2>
+        <p className="text-gray-700 dark:text-gray-300">Explore a selection of our latest technology projects.</p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Map through the projects array and render a card for each project */}
@@ -98,8 +98,7 @@ function ProjectCard({ images, title, description, githubLink, liveLink, tags })
   };
 
   return (
-    <div className="bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
-
+    <div className="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-lg" data-aos="fade-up">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
@@ -112,13 +111,13 @@ function ProjectCard({ images, title, description, githubLink, liveLink, tags })
         ))}
       </Slider>
       <div className="mt-4">
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
-        <p className="mb-4 text-gray-300">{description}</p>
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
+        <p className="mb-4 text-gray-700 dark:text-gray-300">{description}</p>
         <div className="flex space-x-4">
           {/* GitHub and Live Link Icons */}
           <a
             href={githubLink}
-            className="text-white hover:text-gray-400"
+            className="text-gray-900 hover:text-gray-400 dark:text-white dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -126,7 +125,7 @@ function ProjectCard({ images, title, description, githubLink, liveLink, tags })
           </a>
           <a
             href={liveLink}
-            className="text-white hover:text-gray-400"
+            className="text-gray-900 hover:text-gray-400 dark:text-white dark:hover:text-gray-400"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -138,7 +137,7 @@ function ProjectCard({ images, title, description, githubLink, liveLink, tags })
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="inline-block bg-gray-700 text-white py-1 px-2 rounded mr-2 text-sm"
+              className="inline-block bg-gray-700 text-white py-1 px-2 rounded mr-2 text-sm dark:bg-gray-600"
             >
               {tag}
             </span>
